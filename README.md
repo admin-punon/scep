@@ -1,19 +1,19 @@
 # scep
 
-[![CI](https://github.com/micromdm/scep/workflows/CI/badge.svg)](https://github.com/micromdm/scep/actions)
-[![Go Reference](https://pkg.go.dev/badge/github.com/micromdm/scep/v2.svg)](https://pkg.go.dev/github.com/micromdm/scep/v2)
+[![CI](https://github.com/admin-punon/scep/workflows/CI/badge.svg)](https://github.com/admin-punon/scep/actions)
+[![Go Reference](https://pkg.go.dev/badge/github.com/admin-punon/scep/v2.svg)](https://pkg.go.dev/github.com/admin-punon/scep/v2)
 
 `scep` is a Simple Certificate Enrollment Protocol server and client
 
 ## Installation
 
-Binary releases are available on the [releases page](https://github.com/micromdm/scep/releases).
+Binary releases are available on the [releases page](https://github.com/admin-punon/scep/releases).
 
 ### Compiling from source
 
 To compile the SCEP client and server you will need [a Go compiler](https://golang.org/dl/) as well as standard tools like git, make, etc.
 
-1. Clone the repository and get into the source directory: `git clone https://github.com/micromdm/scep.git && cd scep`
+1. Clone the repository and get into the source directory: `git clone https://github.com/admin-punon/scep.git && cd scep`
 2. Compile the client and server binaries: `make` (for Windows: `make win`)
 
 The binaries will be compiled in the current directory and named after the architecture. I.e. `scepclient-linux-amd64` and `scepserver-linux-amd64`.
@@ -47,11 +47,12 @@ Minimal example for both server and client.
 
 The default flags configure and run the scep server.
 
-`-depot` must be the path to a folder with `ca.pem` and `ca.key` files.  If you don't already have a CA to use, you can create one using the `ca` subcommand.
+`-depot` must be the path to a folder with `ca.pem` and `ca.key` files. If you don't already have a CA to use, you can create one using the `ca` subcommand.
 
 The scepserver provides one HTTP endpoint, `/scep`, that facilitates the normal PKIOperation/Message parameters.
 
 Server usage:
+
 ```sh
 $ ./scepserver-linux-amd64 -help
   -allowrenew string
@@ -82,6 +83,7 @@ type <command> --help to see usage for each subcommand
 Use the `ca -init` subcommand to create a new CA and private key.
 
 CA sub-command usage:
+
 ```
 $ ./scepserver-linux-amd64 ca -help
 Usage of ca:
@@ -180,10 +182,10 @@ docker run -it --rm -v /path/to/ca/folder:/depot -p 8080:8080 micromdm/scep:late
 The core `scep` library can be used for both client and server operations.
 
 ```
-go get github.com/micromdm/scep/scep
+go get github.com/admin-punon/scep/scep
 ```
 
-For detailed usage, see the [Go Reference](https://pkg.go.dev/github.com/micromdm/scep/v2/scep).
+For detailed usage, see the [Go Reference](https://pkg.go.dev/github.com/admin-punon/scep/v2/scep).
 
 Example (server):
 
