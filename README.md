@@ -1,5 +1,7 @@
 # scep
 
+# 2.5.0
+
 [![CI](https://github.com/admin-punon/scep/workflows/CI/badge.svg)](https://github.com/admin-punon/scep/actions)
 [![Go Reference](https://pkg.go.dev/badge/github.com/admin-punon/scep/v2.svg)](https://pkg.go.dev/github.com/admin-punon/scep/v2)
 
